@@ -1,5 +1,4 @@
 import csv
-from matplotlib.pyplot import title
 from selectorlib import Extractor
 import requests 
 

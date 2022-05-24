@@ -1,8 +1,6 @@
 import csv
 from selectorlib import Extractor
-import requests 
-import json 
-from time import sleep
+import requests
 
 
 # Create an Extractor by reading from the YAML file
