@@ -1,6 +1,8 @@
 import csv
 from selectorlib import Extractor
-import requests 
+import requests
+
+from amazon import scrap 
 
 
 # Create an Extractor by reading from the YAML file
@@ -37,5 +39,8 @@ with open('results.csv', 'w', newline='', encoding='utf-8') as f:
                     rating = product['rating']
                     reviews = product['reviews']
                     writer.writerow([url1, title1, price, rating, reviews])
-
-                
+                    if page > 15:
+                        try:
+                            scrap(url1)
+                        except:
+                            print('Cannot scrap')
